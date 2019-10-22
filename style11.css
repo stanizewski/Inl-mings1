@@ -1,22 +1,29 @@
-:root{
+:root{ 
     --primary:#ddd;
     --dark: #333;
     --light: #fff;
     --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-}
+} /*bestämmer färg som jag kan använda senare*/
 
 html {
     box-sizing: border-box;
     font-family: Arial, helvetica, sans-serif;
     color: var(--dark);
-
-}
+    scroll-behavior: smooth;
+    width: 100%;
+} /*bestämmer regler för hela html, tex text*/
 
 body {
     background: #ccc;
-    margin: 30px 50px;
-    line-height: 1.4;
+    line-height: 1.4; 
+      
 }
+
+ul{
+    padding: 0;
+    list-style: none;
+} /*bestämmer ul regler tex ta bort punker framför länkar*/
+
 
 .btn {
     background: var(--dark);
@@ -24,15 +31,10 @@ body {
     padding: 0.6rem 1.3rem;
     text-decoration: none;
     border: 0;
-}
+} /* Bestämmer regler för mina knappar*/
 
 img {
     max-width: 100%;
-}
-
-.wrapper {
-    display: grid;
-    grid-gap: 20px;
 }
 
 .main-nav ul {
@@ -41,7 +43,7 @@ img {
     padding: 3%;
     list-style: none;
     grid-template-columns: 1fr 1fr 1fr 1fr;   
-}
+} /*Bestämmer regler för main-nav ul*/
 
 .main-nav a {
     background: var(--primary);
@@ -53,21 +55,13 @@ img {
     text-transform: uppercase;
     font-size: 1.1rem;
     box-shadow: var(--shadow);
-
-}
+} /*Bestämmer regler för main-nav a*/
 
 .main-nav a:hover{
     background: var(--dark);
     color: var(--light);
+} /*Bestämmer färger*/
 
-}
-
-
-.top-container {
-    display: grid;
-    grid-gap: 20px;
-
-}
 
 .showcase{
     grid-area: showcase;
@@ -81,56 +75,63 @@ img {
     align-items: start;
     justify-content: center;
     box-shadow: var(--shadow);
-}
+} /*bestämmer hur mitt showcase ska se ut*/
 
 .showcase h1 {
     font-size: 4rem;
     margin-bottom: 0;
     color: var(--light);
-}
+}  /*Bestämmer hur H1 "Hemsida" ska se ut*/
 
 .showcase p {
     font-size: 1.3rem;
     margin-top: 0;
     color: var(--light);
-}
-        
-.top-box {
-    background: var(--light);
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    box-shadow: var(--shadow);
-    padding: 1.5rem;
-}
-
+} /*Bestämmer hur texten i showcase ser ut*/
 
 .tjänster {
     display: grid;
     text-align: center;
     padding: 1.5rem 2rem;
     grid-gap: 20px;
-    grid-template-columns: fr1 fr1 fr1;
-   
-}
+    grid-template-columns: 1fr 1fr 1fr;
+} /*bestämer regler till min sida tjänser*/
+/*tex hur bilderna ska ligga samt text*/
+
+.tjänster__h2{
+    width: 30px;
+    margin: auto;
+    padding: 2rem 0;
+} /*Bestämer rubriken, att den ligger tex i mitten*/
+
+.image-container{
+ width: 82%;
+ min-height: 95px;
+ margin: auto;
+} /*Ville få ena bilden i samma storlek som resten*/
+
 .center{
     text-align: center;
     grid-template-columns: fr1 fr1 fr1;
-}
+} 
+
 .boxes {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
-
-}
+} /*Bestämmer regler för mina boxar, tex att de ligger brevid varandra*/
 
 .box {
     background: var(--primary);
-    text-align: center;
+    text-align: left;
     padding: 1.5rem 2rem;
     box-shadow: var(--shadow);
+} /*bestämmer hur boxarna ska se ut tex skuggning, hur texten ska ligga*/
 
-}
+.image-tjänster{
+    width: 95%;
+    margin: auto;
+} /*ville så samma storlek som resterande bilder*/
 
 .info{
     background: var(--primary);
@@ -138,22 +139,13 @@ img {
     display: grid;
     grid-gap: 30px;
     grid-template-columns: repeat(2, 1fr);
-    padding: 3rem;
-}
+    margin: 2rem 0;
+} /*skapar alla regler inuti informationboxen*/
+/* tex färg, att den ska ligga 2rem under tjänster men auto på sidorna darav 0*/
 
-.portfolio{
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
-}
 
-.portfolio img{
-    width: 100%;
-    box-shadow: var(--shadow);
-}
-
-/* Style inputs with type="text", select elements and textareas */
+/*detta är kontaktrutan*/
 input[type=text], select, textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */ 
@@ -188,13 +180,53 @@ input[type=text], select, textarea {
   }
 
 
+.omoss {
+    background: var(--primary);
+    box-shadow: var(--shadow);
+    display: grid;
+    text-align: left;
+    padding: 1.5rem 2rem;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    margin: 2rem 0;
+} /*regler för boxen "info" tex hur texten ska vara, färg*/
+
+.andra{
+   padding-left: 50%;
+   line-height: 25px;
+} /* hur jag vill att texten i classen .andra ska ligga samt mellanrum i raderna*/
+
+.tredje{
+    line-height: 25px;
+} /*mellanrum i raderna*/
+
+.länkar_1{
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  line-height: 50px;
+  /*Bestämer hur jag vill ha mina iconer i info*/
+  
+
+}
 footer{
     margin-top: 2rem;
     background: var(--dark);
     color: var(--light);
     text-align: center;
     padding: 1rem;
-}
+} /*Hur min fotter ska se ut tex storlek och färg*/
+
+a{
+    text-decoration: none;
+    color: var(--dark);
+}  /*Tar bort underlinjen i länkar plus färg*/
+
+a:hover{
+    transform: scale(1.1);
+    background: grey;
+} /*hur stor mina navknappar blir när jag håller på dem*/
+/*även färg när jag håller på knappen*/
+
 
 @media(max-width: 800px){
     .top-container{
@@ -220,6 +252,18 @@ footer{
         margin: auto;
     }
 
+    .boxes {
+        grid-template-columns: 1fr;
+        /*margin för att göra mindre*/
+    }
+     
+   .omoss{
+    grid-template-columns: 1fr;
+
+   }
+
+   .andra{
+       padding: 0;
     
    }
     @media(max-width: 500px){
@@ -229,4 +273,24 @@ footer{
             "top-box-a"
             "top-box-b";
     }
+    .tjänster{
+        grid-template-columns: 1fr;
     }
+
+    .box{
+        width: 80vw;
+        margin-right: 2rem;
+    }
+
+    .boxes{
+        width: 80vw;
+    }
+
+    .info{
+        padding: 1rem;
+    }
+    .footer{
+        width: 80%;
+    margin: auto;
+    }
+}
