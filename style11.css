@@ -266,6 +266,7 @@ a:hover{
        padding: 0;
     
    }
+}
     @media(max-width: 500px){
         .top-container{
             grid-template-areas:
